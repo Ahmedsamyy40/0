@@ -267,12 +267,18 @@
   background-size: auto, cover, auto; /* حجم الخلفية */
   padding-block-start: 80px; /* مساحة من الأعلى */
   padding-block-end: 250px; /* مساحة من الأسفل */
+  display: flex; /* لعرض العناصر داخل القسم الرئيسي ككتلة واحدة */
+  justify-content: center; /* توسيط العناصر أفقياً */
+  align-items: center; /* توسيط العناصر عمودياً */
+  text-align: center; /* توسيط النصوص */
+  flex-direction: column; /* عرض العناصر عمودياً */
 }
+
 /* تحريك الشعار بناءً على حجم الشاشة */
 @media (max-width: 768px) {
   .about-banner {
-    padding-left: 20px; /* تقليل المسافة في الشاشات الصغيرة */
-    padding-right: 30px; /* تقليل المسافة في الشاشات الصغيرة */
+    padding-left: 90px; /* تقليل المسافة في الشاشات الصغيرة */
+    padding-right: 10px; /* تقليل المسافة في الشاشات الصغيرة */
   }
 
   .about-banner img {
@@ -281,12 +287,10 @@
   }
 }
 
-
 /* التحكم في العنوان الفرعي */
 .hero-subtitle {
   font-size: 2rem; /* حجم الخط */
   color: #f0f0f0; /* لون الخط */
-  text-align: center; /* توسيط النص */
   margin-bottom: 10px; /* مسافة أسفل العنوان الفرعي */
 }
 
@@ -294,7 +298,6 @@
 .hero-title {
   font-size: 4rem; /* حجم الخط */
   color: #fff; /* لون الخط */
-  text-align: center; /* توسيط النص */
   margin-bottom: 20px; /* مسافة أسفل العنوان */
 }
 
@@ -302,7 +305,6 @@
 .hero-text {
   font-size: 1.25rem; /* حجم الخط */
   color: #f0f0f0; /* لون الخط */
-  text-align: center; /* توسيط النص */
   margin-bottom: 30px; /* مسافة أسفل النص */
 }
 
@@ -310,9 +312,9 @@
 .btn {
   display: inline-block; /* لعرض الزر كعنصر في السطر */
   font-size: 1.25rem; /* حجم النص في الزر */
-  padding: 52px 44px; /* حجم الزر */
+  padding: 12px 24px; /* حجم الزر */
   background-color: #007bff; /* لون خلفية الزر */
-  color: #red; /* لون النص */
+  color: #fff; /* لون النص */
   border-radius: 5px; /* زوايا دائرية للزر */
   text-decoration: none; /* إزالة التسطير من النص */
   margin-top: 30px; /* مسافة من أعلى الزر */
@@ -328,7 +330,6 @@
   max-width: 400px; /* زيادة عرض المحتوى */
   margin: 0 auto; /* لتوسيط المحتوى */
 }
-
 
 
 
@@ -370,11 +371,14 @@
   transform: translateY(-50%); /* تصحيح موضع الأيقونة ليكون في المنتصف */
 }
 
-/* تصميم النص في البطاقة */
-.service-card .branch-item {
-  margin: 0; /* إزالة التباعد الخارجي الافتراضي */
-  font-size: var(--fs-7); /* تحديد حجم الخط */
-  font-weight: var(--fw-500); /* تحديد وزن الخط */
+/* تكبير النص في قسم "فروعنا" وجعله بولد */
+.branch-item {
+  font-size: 22px; /* تكبير حجم النص */
+  font-weight: bold; /* جعل النص عريض */
+  color: var(--st-patricks-blue); /* تحديد لون النص */
+  margin: 0; /* إزالة التباعد حول النص */
+  text-align: center; /* محاذاة النص إلى الوسط */
+  transition: color 0.3s ease; /* إضافة تأثيرات لون ديناميكية */
 }
 
 /* قائمة منسدلة */
@@ -1132,18 +1136,6 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 </div>
 
 
-
-
-      <!-- بطاقة الخدمة 5 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <ion-icon name="location-outline"></ion-icon>
-        </div>
-        <h3 class="branch-item"><a href="branch5.html">فرع الشيخ زايد 5</a></h3>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
