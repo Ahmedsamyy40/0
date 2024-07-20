@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Anderlecht Academy</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+
   <style>
     /* متغيرات الألوان والخطوط */
     :root {
@@ -132,128 +139,117 @@ body {
 
 
 
-    /* إعدادات الرأس (الهيدر) */
-    .header .btn { display: none; }
 
-    .header {
-      --color: var(--white);
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
 
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding-block: 2px; /* تصغير التباعد العمودي */
-      z-index: 4;
-      transition: var(--transition-1);
+/* إعدادات الرأس (الهيدر) */
+.header .btn { display: none; }
 
+.header {
+  --color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 2px; /* تصغير التباعد العمودي */
+  z-index: 4;
+  transition: var(--transition-1);
+  height: 20px; /* تصغير ارتفاع الهيدر */
+}
 
-
-     
-          }
-
-
-    .header.active {
-      --color: var(--st-patricks-blue);
-
-      position: fixed;
-      background-color: var(--white);
-      box-shadow: 0 2px 30px hsla(0, 0%, 0%, 0.1);
+.header.active {
+  --color: var(--st-patricks-blue);
+  position: fixed;
+  background-color: var(--white);
+  box-shadow: 0 2px 30px hsla(0, 0%, 0%, 0.1);
   padding-block: 6px; /* تصغير التباعد العمودي للهيدر الثابت */
-    }
+}
 
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
 
-    .header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
+.logo {
+  width: 80px; /* تكبير حجم الشعار */
+  height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+}
 
-    .logo {
-      color: var(--color);
-      font-family: var(--ff-source-sans-pro);
-      font-size: var(--fs-3);
-    }
+.nav-open-btn {
+  color: var(--gradient-1);
 
-    .nav-open-btn {
-      color: var(--color);
-      font-size: 32px;
-      padding: 4px;
-    }
+  font-size: 32px;
+  padding: 4px;
+}
 
+/* إعدادات شريط التنقل */
+.navbar {
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 100%;
+  max-width: 280px;
+  min-height: 100%;
+  padding: 20px;
+  visibility: hidden;
+  z-index: 2;
+  transition: 0.25s var(--cubic-in);
+}
 
+.navbar.active {
+  transform: translateX(280px);
+  visibility: visible;
+  transition: 0.5s var(--cubic-out);
+}
 
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 10px 30px;
+}
 
+.navbar-top .logo {
+  color: var(--st-patricks-blue);
+  font-size: 4.2rem;
+  font-weight: var(--fw-700);
+}
 
+.nav-close-btn {
+  color: var(--space-cadet-1);
+  font-size: 2.8rem;
+  padding: 4px;
+}
 
+.navbar-item:not(:last-child) { border-bottom: 1px solid var(--platinum); }
 
-    /* إعدادات شريط التنقل */
-    .navbar {
-      background-color: var(--white);
-      position: fixed;
-      top: 0;
-      left: -280px;
-      width: 100%;
-      max-width: 280px;
-      min-height: 100%;
-      padding: 20px;
-      visibility: hidden;
-      z-index: 2;
-      transition: 0.25s var(--cubic-in);
-    }
+.navbar-link {
+  color: var(--space-cadet-1);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-600);
+  padding-block: 12px;
+}
 
-    .navbar.active {
-      transform: translateX(280px);
-      visibility: visible;
-      transition: 0.5s var(--cubic-out);
-    }
+/* إعدادات التراكب */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--black_70);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-2);
+}
 
-    .navbar-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-block: 10px 30px;
-    }
-
-    .navbar-top .logo {
-      color: var(--st-patricks-blue);
-      font-size: 4.2rem;
-      font-weight: var(--fw-700);
-    }
-
-    .nav-close-btn {
-      color: var(--space-cadet-1);
-      font-size: 2.8rem;
-      padding: 4px;
-    }
-
-    .navbar-item:not(:last-child) { border-bottom: 1px solid var(--platinum); }
-
-    .navbar-link {
-      color: var(--space-cadet-1);
-      font-size: var(--fs-8);
-      font-weight: var(--fw-600);
-      padding-block: 12px;
-    }
-
-
-
-
-    /* إعدادات التراكب */
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background-color: var(--black_70);
-      z-index: 1;
-      opacity: 0;
-      pointer-events: none;
-      transition: var(--transition-2);
-    }
-
-    .overlay.active {
-      opacity: 1;
-      pointer-events: all;
-    }
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
 
 
 
@@ -265,11 +261,9 @@ body {
 
 
 
-
-
-
-
-
+/*-----------------------------------*\
+  #MAIN HERO
+\*-----------------------------------*/
 /* إعدادات القسم الرئيسي */
 .hero {
   background-image: url("images/hero-bg-bottom.png"),
@@ -279,7 +273,7 @@ body {
   background-position: -250px bottom, center, center; /* موقع الخلفية */
   background-size: auto, cover, auto; /* حجم الخلفية */
   padding-block-start: 80px; /* مساحة من الأعلى */
-  padding-block-end: 250px; /* مساحة من الأسفل */
+  padding-block-end: 250px; /* تقليل مساحة من الأسفل */
   display: flex; /* لعرض العناصر داخل القسم الرئيسي ككتلة واحدة */
   justify-content: center; /* توسيط العناصر أفقياً */
   align-items: center; /* توسيط العناصر عمودياً */
@@ -290,7 +284,7 @@ body {
 /* تحريك الشعار بناءً على حجم الشاشة */
 @media (max-width: 768px) {
   .about-banner {
-    padding-left: 90px; /* تقليل المسافة في الشاشات الصغيرة */
+    padding-left: 20px; /* تقليل المسافة في الشاشات الصغيرة */
     padding-right: 10px; /* تقليل المسافة في الشاشات الصغيرة */
   }
 
@@ -347,6 +341,123 @@ body {
 
 
 
+
+
+
+
+
+
+/*-----------------------------------*\
+  #CAROUSEL
+\*-----------------------------------*/
+
+        .carousel {
+            position: relative;
+            max-width: 1000px; /* Adjust max-width as per your layout */
+            height: 600px; /* Adjust height as per your preference */
+            margin: 0 auto; /* Center the carousel horizontally */
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel .carousel-control {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 2em;
+            z-index: 100;
+            transform: translateY(-50%);
+        }
+
+        .carousel .prev-slide {
+            left: 10px;
+        }
+
+        .carousel .next-slide {
+            right: 10px;
+        }
+
+        .carousel .prev-slide:hover,
+        .carousel .next-slide:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+        }        .container {
+            padding: 20px;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .carousel .prev-slide:hover,
+        .carousel .next-slide:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel .carousel-item {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .carousel .carousel-indicator {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel .carousel-indicator.active {
+            background-color: white;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------*\
+  #BRANCHES
+\*-----------------------------------*/
+
 /* إعدادات قسم فروعنا */
 .service-list {
   display: flex; /* استخدام تصميم الفلكس لتوزيع العناصر */
@@ -354,7 +465,7 @@ body {
   gap: 30px; /* إضافة مسافة بين العناصر */
 }
 
-/* تصميم بطاقة الخدمة */
+/* تصميم بطاقة المنطقة */
 .service-card {
   text-align: center; /* محاذاة النصوص في منتصف البطاقة */
   padding: 15px; /* إضافة تباعد داخلي */
@@ -376,7 +487,7 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* زيادة تأثير ظل عند مرور الفأرة */
 }
 
-/* تصميم أيقونة الخدمة */
+/* تصميم أيقونة المنطقة */
 .service-card .service-icon {
   position: absolute; /* تعيين موضع الأيقونة بشكل مطلق */
   right: 15px; /* محاذاة الأيقونة إلى اليمين */
@@ -449,7 +560,7 @@ body {
   color: #000000; /* تغيير لون النصوص عند مرور الفأرة */
 }
 
-/* إظهار القائمة المنسدلة عند الضغط على بطاقة الخدمة */
+/* إظهار القائمة المنسدلة عند الضغط على بطاقة المنطقة */
 .dropdown-content.show {
   display: block; /* عرض القائمة المنسدلة */
   opacity: 1; /* تعيين الشفافية إلى 1 */
@@ -499,6 +610,9 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
+/*-----------------------------------*\
+  #UNKNOWN
+\*-----------------------------------*/
 
 
     /* إعدادات قسم "حول" */
@@ -591,6 +705,9 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
+/*-----------------------------------*\
+  #faq
+\*-----------------------------------*/
 
     /* إعدادات قسم الأسئلة المتكررة */
     .faq-item:not(:last-child) { margin-block-end: 15px; }
@@ -601,10 +718,95 @@ overflow-y: auto; /* تمكين التمرير العمودي */
       font-weight: var(--fw-500);
     }
 
+/*-----------------------------------*\
+  #PICTURES
+\*-----------------------------------*/
+/* إعدادات قسم الصور */
+.photo-gallery {
+  padding: 20px;
+}
+/* تكبير النص في قسم "فروعنا" وجعله بولد */
+.branch-item {
+  font-size: 22px; /* تكبير حجم النص */
+  font-weight: bold; /* جعل النص عريض */
+  color: var(--st-patricks-blue); /* تحديد لون النص */
+  margin: 0; /* إزالة التباعد حول النص */
+  text-align: center; /* محاذاة النص إلى الوسط */
+  transition: color 0.3s ease; /* إضافة تأثيرات لون ديناميكية */
+}
 
+.photo-gallery h2 {
+    font-size: 42px; /* تكبير حجم النص */
+  font-weight: bold; /* جعل النص عريض */
+  color: var(--st-patricks-blue); /* تحديد لون النص */
+  margin: 0; /* إزالة التباعد حول النص */
+  text-align: center; /* محاذاة النص إلى الوسط */
+  transition: color 0.3s ease; /* إضافة تأثيرات لون ديناميكية */
+}
 
+/* إعدادات الألبوم */
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* توسيط الألبومات */
+}
 
+.album {
+  flex: 1 1 calc(25% - 20px); /* 4 ألبومات في صف واحد */
+  box-sizing: border-box;
+}
 
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* عدد الأعمدة */
+  gap: 10px; /* المسافة بين الصور */
+}
+
+.photo-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.show-more {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.show-more:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+/* استجابة التصميم لشاشات أصغر */
+@media (max-width: 768px) {
+  .album {
+    flex: 1 1 calc(50% - 20px); /* ألبومين في صف واحد */
+  }
+}
+
+@media (max-width: 480px) {
+  .album {
+    flex: 1 1 100%; /* ألبوم واحد في صف واحد */
+  }
+}
 
 
 /*-----------------------------------*\
@@ -793,6 +995,38 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 }
 
 
+
+/*-----------------------------------*\
+  #INSTA & FACEBOOK LIVE VIEW
+\*-----------------------------------*/
+
+.live-social-views {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.facebook-live, .instagram-live {
+  width: 340px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.facebook-live iframe, .instagram-live iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: auto;
+}
+
+
+
+
+
+
+
+
+
 /*-----------------------------------*\
   #chatbot & wa icons
 \*-----------------------------------*/
@@ -826,141 +1060,9 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
-
-
-
-.live-social-views {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.facebook-live, .instagram-live {
-  width: 340px;
-  height: 400px;
-  overflow: hidden;
-}
-
-.facebook-live iframe, .instagram-live iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  overflow: auto;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        .carousel {
-            position: relative;
-            max-width: 1000px; /* Adjust max-width as per your layout */
-            height: 600px; /* Adjust height as per your preference */
-            margin: 0 auto; /* Center the carousel horizontally */
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .carousel .carousel-control {
-            position: absolute;
-            top: 50%;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 2em;
-            z-index: 100;
-            transform: translateY(-50%);
-        }
-
-        .carousel .prev-slide {
-            left: 10px;
-        }
-
-        .carousel .next-slide {
-            right: 10px;
-        }
-
-        .carousel .prev-slide:hover,
-        .carousel .next-slide:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        .carousel img {
-            width: 100%;
-            height: auto;
-            display: none;
-        }
-
-        .carousel img.active {
-            display: block;
-        }        .container {
-            padding: 20px;
-            max-width: 100%;
-            margin: auto;
-        }
-
-        .carousel .prev-slide:hover,
-        .carousel .next-slide:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .carousel .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel .carousel-item {
-            min-width: 100%;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .carousel .carousel-indicators {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-        }
-
-        .carousel .carousel-indicator {
-            background-color: rgba(0, 0, 0, 0.5);
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-
-        .carousel .carousel-indicator.active {
-            background-color: white;
-        }
-
-
-
-
-
-
-
+                                                                                                             /*-----------------------------------*\
+                                                                                                                                 #HTML CODE
+                                                                                                            \*-----------------------------------*/
 
 
 
@@ -972,14 +1074,20 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
+
+
+
+
+
+
+
   <!-- رأس الصفحة -->
- 
-  <header class="header">
-    <div class="container">
-      <a href="#" class="logo">أكاديمية أندرلخت</a>
-      <button class="nav-open-btn"><ion-icon name="menu-outline"></ion-icon></button>
-    </div>
-  </header>
+<header class="header">
+  <div class="container">
+    <img src="images\RSCA_Crest_white.png" alt="Logo" class="logo">
+    <button class="nav-open-btn">☰</button>
+  </div>
+</header>
 
 
 
@@ -1020,11 +1128,10 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 .</p>
  <figure class="about-banner">
-    <img src="images/RSCA_Crest_white.png" width="350" height="300" loading="lazy" alt="logo"
-      class="w-80 banner-animation">
+
   </figure>
     <!-- زر التسجيل -->
-    <a href="https://forms.gle/xmRnZ5qR1QCmpsH28" class="btn">Register Now</a>
+    <a href="https://forms.gle/xmRnZ5qR1QCmpsH28" class="btn">سجل الأن</a>
   </div>
 </section>
 
@@ -1237,9 +1344,72 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     </div>
 </div>
 
+<!-- قسم الصور -->
+<section class="photo-gallery">
+  <h2>صور من تدريباتنا</h2>
+  <div class="underline"></div>
+  <div class="albums">
+    <!-- ألبوم 1 -->
+    <div class="album">
+      <h3>ألبوم 1</h3>
+      <div class="photo-grid">
+        <div class="photo-item"><img src="1.JPG" alt="تدريب 1"></div>
+        <div class="photo-item"><img src="2.JPG" alt="تدريب 2"></div>
+        <div class="photo-item"><img src="3.JPG" alt="تدريب 3"></div>
+        <div class="photo-item"><img src="4.JPG" alt="تدريب 4"></div>
+        <div class="photo-item hidden"><img src="5.JPG" alt="تدريب 5"></div>
+        <div class="photo-item hidden"><img src="6.JPG" alt="تدريب 6"></div>
+        <!-- المزيد من الصور يمكن إضافتها هنا -->
+      </div>
+      <button class="show-more">عرض كل الصور</button>
+    </div>
 
+    <!-- ألبوم 2 -->
+    <div class="album">
+      <h3>ألبوم 2</h3>
+      <div class="photo-grid">
+        <div class="photo-item"><img src="1.JPG" alt="تدريب 1"></div>
+        <div class="photo-item"><img src="2.JPG" alt="تدريب 2"></div>
+        <div class="photo-item"><img src="3.JPG" alt="تدريب 3"></div>
+        <div class="photo-item"><img src="4.JPG" alt="تدريب 4"></div>
+        <div class="photo-item hidden"><img src="5.JPG" alt="تدريب 5"></div>
+        <div class="photo-item hidden"><img src="6.JPG" alt="تدريب 6"></div>
+        <!-- المزيد من الصور يمكن إضافتها هنا -->
+      </div>
+      <button class="show-more">عرض كل الصور</button>
+    </div>
 
+    <!-- ألبوم 3 -->
+    <div class="album">
+      <h3>ألبوم 3</h3>
+      <div class="photo-grid">
+        <div class="photo-item"><img src="1.JPG" alt="تدريب 1"></div>
+        <div class="photo-item"><img src="2.JPG" alt="تدريب 2"></div>
+        <div class="photo-item"><img src="3.JPG" alt="تدريب 3"></div>
+        <div class="photo-item"><img src="4.JPG" alt="تدريب 4"></div>
+        <div class="photo-item hidden"><img src="5.JPG" alt="تدريب 5"></div>
+        <div class="photo-item hidden"><img src="6.JPG" alt="تدريب 6"></div>
+        <!-- المزيد من الصور يمكن إضافتها هنا -->
+      </div>
+      <button class="show-more">عرض كل الصور</button>
+    </div>
 
+    <!-- ألبوم 4 -->
+    <div class="album">
+      <h3>ألبوم 4</h3>
+      <div class="photo-grid">
+        <div class="photo-item"><img src="1.JPG" alt="تدريب 1"></div>
+        <div class="photo-item"><img src="2.JPG" alt="تدريب 2"></div>
+        <div class="photo-item"><img src="3.JPG" alt="تدريب 3"></div>
+        <div class="photo-item"><img src="4.JPG" alt="تدريب 4"></div>
+        <div class="photo-item hidden"><img src="5.JPG" alt="تدريب 5"></div>
+        <div class="photo-item hidden"><img src="6.JPG" alt="تدريب 6"></div>
+        <!-- المزيد من الصور يمكن إضافتها هنا -->
+      </div>
+      <button class="show-more">عرض كل الصور</button>
+    </div>
+  </div>
+</section>
 
 
 
@@ -1545,7 +1715,28 @@ document.getElementById('chatbot-icon').addEventListener('click', function() {
 </script>
 
 
+
+
 <script async src="//www.instagram.com/embed.js"></script>
+
+  <!-- تضمين JavaScript -->
+  <script>
+    // إضافة التفاعل مع زر "عرض كل الصور"
+    document.querySelectorAll('.show-more').forEach(button => {
+      button.addEventListener('click', function() {
+        const photoGrid = this.previousElementSibling;
+        const hiddenPhotos = photoGrid.querySelectorAll('.hidden');
+
+        hiddenPhotos.forEach(photo => {
+          photo.classList.remove('hidden');
+        });
+
+        // إخفاء زر "عرض كل الصور" بعد النقر
+        this.style.display = 'none';
+      });
+    });
+  </script>
+
 
 
 
