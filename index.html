@@ -718,6 +718,12 @@ overflow-y: auto; /* تمكين التمرير العمودي */
       font-weight: var(--fw-500);
     }
 
+
+
+
+
+
+
 /*-----------------------------------*\
   #PICTURES
 \*-----------------------------------*/
@@ -753,7 +759,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 }
 
 .album {
-  flex: 1 1 calc(25% - 20px); /* 4 ألبومات في صف واحد */
+  flex: 1 1 calc(50% - 20px); /* 4 ألبومات في صف واحد */
   box-sizing: border-box;
 }
 
@@ -807,6 +813,10 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     flex: 1 1 100%; /* ألبوم واحد في صف واحد */
   }
 }
+
+
+
+
 
 
 /*-----------------------------------*\
@@ -1021,6 +1031,35 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
+/*-----------------------------------*\
+  #GO TO TOP
+\*-----------------------------------*/
+
+.go-top {
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  background-color: var(--winter-sky);
+  color: var(--white);
+  font-size: 2rem;
+  padding: 14px;
+  border-radius: var(--radius-4);
+  box-shadow: -3px 3px 15px var(--winter-sky_50);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition-1);
+}
+
+.go-top.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-15px);
+}
+
+
+
+
 
 
 
@@ -1104,10 +1143,11 @@ overflow-y: auto; /* تمكين التمرير العمودي */
       </button>
     </div>
     <ul class="navbar-list">
-      <li><a href="#carousel" class="navbar-link">About</a></li>
-      <li><a href="#services" class="navbar-link">Services</a></li>
-      <li><a href="#faq" class="navbar-link">FAQ</a></li>
-      <li><a href="#contact" class="navbar-link">Contact</a></li>
+      <li><a href="#" class="navbar-link">الرئيسيه</a></li>
+      <li><a href="#carousel" class="navbar-link"> عن الاكاديمية</a></li>
+      <li><a href="#فروعنا" class="navbar-link"> فروعنا</a></li>
+      <li><a href="#gallery" class="navbar-link">صور من التدريبات</a></li>
+      <li><a href="#footer" class="navbar-link">تواصل معنا</a></li>
     </ul>
   </nav>
   </div>
@@ -1141,6 +1181,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 <!-- Carousel Section -->
+<section id="carousel" 
 <section class="carousel">
     <button class="carousel-control prev-slide" aria-label="Previous Slide">
         <ion-icon name="chevron-back-outline"></ion-icon>
@@ -1344,7 +1385,18 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
 <!-- قسم الصور -->
+<section id="gallery" 
 <section class="photo-gallery">
   <h2>صور من تدريباتنا</h2>
   <div class="underline"></div>
@@ -1540,7 +1592,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     - #GO TO TOP
   -->
 
-  <a href="#top" class="go-top  active" aria-label="Go To Top" data-go-top>
+  <a href="#" class="go-top  active" aria-label="Go To Top" data-go-top>
     <ion-icon name="arrow-up-outline"></ion-icon>
   </a>
 
@@ -1551,10 +1603,13 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   <a href="https://api.whatsapp.com/send?phone=+201115222020" target="_blank" class="whatsapp-icon">
     <img src="images/wa.png" alt="WhatsApp">
   </a>
-  <div class="chatbot-icon" id="chatbot-icon">
-    <img src="images/chatbot.jpg" alt="Chatbot">
-  </div>
+
+
+  <!-- أيقونة الشات بوت -->
+<div class="chatbot-icon" id="chatbot-icon">
+  <img src="images/chatbot.png" alt="Chatbot">
 </div>
+
 
 
 
