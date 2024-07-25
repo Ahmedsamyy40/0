@@ -444,6 +444,10 @@ body {
         }
 
 
+
+                                                                                             ----------------------------------------
+
+
 /*-----------------------------------*\
   #اراء العملاء 
 \*-----------------------------------*/
@@ -518,8 +522,7 @@ body {
     }
 }
 
-----------------------------------------------------------------------
-body {
+   body {
     font-family: 'Somar', sans-serif;
     text-align: center;
     margin: 0;
@@ -597,66 +600,8 @@ body {
     }
 }
 
-.sponsors {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
 
-.sponsor {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: calc(25% - 40px);
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.sponsor-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-@media (max-width: 768px) {
-    .sponsor {
-        width: calc(50% - 40px);
-    }
-}
-
-@media (max-width: 480px) {
-    .sponsor {
-        width: calc(100% - 40px);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                                                          -------------------------------------------------------
 
 
 
@@ -672,7 +617,7 @@ body {
 }
 
 /* تصميم بطاقة المنطقة */
-.service-card {
+.المنطقه {
   text-align: center; /* محاذاة النصوص في منتصف البطاقة */
   padding: 15px; /* إضافة تباعد داخلي */
   background-color: var(--platinum); /* تحديد لون الخلفية */
@@ -688,13 +633,13 @@ body {
 }
 
 /* تغيير لون خلفية البطاقة عند مرور الفأرة */
-.service-card:hover {
+.المنطقه:hover {
   background-color: #e0e0e0; /* تغيير لون الخلفية عند مرور الفأرة */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* زيادة تأثير ظل عند مرور الفأرة */
 }
 
 /* تصميم أيقونة المنطقة */
-.service-card .service-icon {
+.المنطقه .service-icon {
   position: absolute; /* تعيين موضع الأيقونة بشكل مطلق */
   right: 15px; /* محاذاة الأيقونة إلى اليمين */
   top: 50%; /* محاذاة الأيقونة عمودياً في منتصف البطاقة */
@@ -804,129 +749,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*-----------------------------------*\
-  #UNKNOWN
-\*-----------------------------------*/
-
-
-    /* إعدادات قسم "حول" */
-    .about-banner { margin-block-end: 30px; }
-
-    .about .section-title { margin-inline: 0; }
-
-    .about .underline::before {
-      left: 0;
-      transform: translateX(0);
-    }
-
-    .about-text {
-      font-size: var(--fs-8);
-      margin-block-end: 20px;
-    }
-
-    /* إعدادات الأزرار */
-    .btn {
-      color: var(--white);
-      font-size: var(--fs-6);
-      font-weight: var(--fw-500);
-      background: var(--gradient-2);
-      border-radius: var(--radius-12);
-      padding: 12px 32px;
-      box-shadow: var(--shadow);
-      transition: var(--transition-1);
-    }
-
-    .btn:hover { box-shadow: 0 7px 25px hsla(22, 62%, 42%, 0.1); }
-
-    /* إعدادات العناوين */
-    .section-title {
-      color: var(--st-patricks-blue);
-      font-size: var(--fs-2);
-      text-align: center;
-      margin-block-end: 30px;
-    }
-
-    .underline {
-      width: 40px;
-      height: 4px;
-      background-color: var(--winter-sky);
-      margin-inline: auto;
-      margin-block-start: 10px;
-      margin-block-end: 20px;
-      position: relative;
-    }
-
-    .underline::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 20px;
-      height: 4px;
-      background-color: var(--winter-sky_50);
-      transform: translateX(-50%);
-      transition: var(--transition-1);
-    }
-
-    /* إعدادات قسم الخدمات */
-    .service-list {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .service-card {
-      text-align: center;
-      padding: 15px;
-      background-color: var(--platinum);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius-12);
-    }
-
-    .service-title { margin-block-end: 10px; }
-
-    .service-text {
-      color: var(--space-cadet-1);
-      font-size: var(--fs-7);
-      font-weight: var(--fw-500);
-    }
-
-
-
-
-
-
-
-
-
-/*-----------------------------------*\
-  #faq
-\*-----------------------------------*/
-
-    /* إعدادات قسم الأسئلة المتكررة */
-    .faq-item:not(:last-child) { margin-block-end: 15px; }
-
-    .faq-text {
-      color: var(--space-cadet-1);
-      font-size: var(--fs-7);
-      font-weight: var(--fw-500);
-    }
-
-
-
-
+                                                       ---------------------------------------------------
 
 
 
@@ -1020,6 +843,172 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   }
 }
 
+
+                                                                                   ---------------------------------------------- 
+
+/*-----------------------------------*\
+  # poduct
+\*-----------------------------------*/
+/* قسم المنتجات */
+.products {
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+}
+
+
+.products-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width: 300px;
+  text-align: center;
+  scroll-snap-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+}
+
+/* الاستجابة */
+@media (max-width: 768px) {
+  .products-carousel {
+    flex-direction: row;
+  }
+
+  .product-card {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-carousel {
+    flex-direction: row;
+  }
+
+  .product-card {
+    width: 200px;
+  }
+}
+
+                                                                           ----------------------------------------------------------------
+
+/*-----------------------------------*\
+  # BLOG
+\*-----------------------------------*/
+
+
+/* قسم المدونة */
+.blog {
+    padding: 2rem 0;
+}
+
+
+
+.underline {
+    width: 60px;
+    height: 3px;
+    background: #000;
+    margin: 0 auto;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.blog-post {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: calc(50% - 1rem);
+    max-width: 400px;
+}
+
+.blog-img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-content {
+    padding: 1rem;
+}
+
+.blog-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-post {
+        width: calc(100% - 1rem);
+    }
+}
+                                                                                    ----------------------------------------------------------------
+  
+
+
 /*-----------------------------------*\
   # OUR COACHES
 \*-----------------------------------*/
@@ -1112,6 +1101,193 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     font-size: 1em;
   }
 }
+
+
+                                                                           ------------------------------------------------
+
+/*-----------------------------------*\
+  # SPONSOR
+\*-----------------------------------*/
+
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sponsor {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sponsor-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .sponsor {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor {
+        width: calc(100% - 40px);
+    }
+}
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                             -----------------------------------------------------------------------------------------------------------------------------
+
+/*-----------------------------------*\
+  #GENERAL SETTINGS 
+\*-----------------------------------*/
+
+
+    /* إعدادات قسم "حول" */
+    .about-banner { margin-block-end: 30px; }
+
+    .about .section-title { margin-inline: 0; }
+
+    .about .underline::before {
+      left: 0;
+      transform: translateX(0);
+    }
+
+    .about-text {
+      font-size: var(--fs-8);
+      margin-block-end: 20px;
+    }
+
+    /* إعدادات الأزرار */
+    .btn {
+      color: var(--white);
+      font-size: var(--fs-6);
+      font-weight: var(--fw-500);
+      background: var(--gradient-2);
+      border-radius: var(--radius-12);
+      padding: 12px 32px;
+      box-shadow: var(--shadow);
+      transition: var(--transition-1);
+    }
+
+    .btn:hover { box-shadow: 0 7px 25px hsla(22, 62%, 42%, 0.1); }
+
+    /* إعدادات العناوين */
+    .section-title {
+      color: var(--st-patricks-blue);
+      font-size: var(--fs-2);
+      text-align: center;
+      margin-block-end: 30px;
+    }
+
+    .underline {
+      width: 40px;
+      height: 4px;
+      background-color: var(--winter-sky);
+      margin-inline: auto;
+      margin-block-start: 10px;
+      margin-block-end: 20px;
+      position: relative;
+    }
+
+    .underline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 20px;
+      height: 4px;
+      background-color: var(--winter-sky_50);
+      transform: translateX(-50%);
+      transition: var(--transition-1);
+    }
+
+    /* إعدادات قسم الخدمات */
+    .service-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .المنطقه {
+      text-align: center;
+      padding: 15px;
+      background-color: var(--platinum);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-12);
+    }
+
+    .service-title { margin-block-end: 10px; }
+
+    .service-text {
+      color: var(--space-cadet-1);
+      font-size: var(--fs-7);
+      font-weight: var(--fw-500);
+    }
+
+                                  --------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+/*-----------------------------------*\
+  #faq
+\*-----------------------------------*/
+
+
+
+
+ 
+
+
+
+
+
+
 
 
 
@@ -1304,7 +1480,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   }
 }
 
-
+                                                                    --------------------------------------------------------------
 
 /*-----------------------------------*\
   #INSTA & FACEBOOK LIVE VIEW
@@ -1329,7 +1505,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   overflow: auto;
 }
 
-
+                                                         -                             -----------------------------------------------------------
 
 /*-----------------------------------*\
   #GO TO TOP
@@ -1364,7 +1540,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
-
+                                                                     -------------------------------------------------------------
 
 /*-----------------------------------*\
   #chatbot & wa icons
@@ -1396,7 +1572,10 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   transform: scale(1.1);
 }
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
                                                                                                              /*-----------------------------------*\
@@ -1409,16 +1588,6 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   </style>
 </head>
 <body>
-
-
-
-
-
-
-
-
-
-
 
   <!-- رأس الصفحة -->
 <header class="header">
@@ -1448,6 +1617,8 @@ overflow-y: auto; /* تمكين التمرير العمودي */
       <li><a href="#آراء أولياء الأمور" class="navbar-link"> آراء أولياء الأمور</a></li>
       <li><a href="#فروعنا" class="navbar-link"> فروعنا</a></li>
       <li><a href="#gallery" class="navbar-link">صور من التدريبات</a></li>
+      <li><a href="#product" class="navbar-link"> المنتجات</a></li>
+      <li><a href="#مدونة" class="navbar-link"> المقالات</a></li>
       <li><a href="#مدربين الاكاديمية" class="navbar-link">مدربين الاكاديمية  </a></li>
       <li><a href="#رعاة الأكاديمية" class="navbar-link"> رعاة الأكاديمية</a></li>
       <li><a href="#footer" class="navbar-link">تواصل معنا</a></li>
@@ -1585,7 +1756,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 <!-- قائمة فروعنا -->
 <div class="service-list">
     <!-- بطاقة منطقة الشيخ زايد -->
-    <div class="service-card" onclick="toggleDropdown('dropdown1')">
+    <div class="المنطقه" onclick="toggleDropdown('dropdown1')">
         <h3 class="branch-item">فروع الشيخ زايد</h3>
         <div class="service-icon">
             <ion-icon name="location-outline"></ion-icon>
@@ -1610,7 +1781,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
     <!-- بطاقة منطقة أكتوبر -->
-    <div class="service-card" onclick="toggleDropdown('dropdown2')">
+    <div class="المنطقه" onclick="toggleDropdown('dropdown2')">
         <h3 class="branch-item">فروع أكتوبر</h3>
         <div class="service-icon">
             <ion-icon name="location-outline"></ion-icon>
@@ -1633,7 +1804,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
     <!-- بطاقة منطقة حدائق أكتوبر -->
-    <div class="service-card" onclick="toggleDropdown('dropdown3')">
+    <div class="المنطقه" onclick="toggleDropdown('dropdown3')">
         <h3 class="branch-item">فروع حدائق أكتوبر</h3>
         <div class="service-icon">
             <ion-icon name="location-outline"></ion-icon>
@@ -1654,7 +1825,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
     <!-- بطاقة منطقة الهرم وفيصل والمهندسين -->
-    <div class="service-card" onclick="toggleDropdown('dropdown4')">
+    <div class="المنطقه" onclick="toggleDropdown('dropdown4')">
         <h3 class="branch-item">فروع الهرم وفيصل والمهندسين</h3>
         <div class="service-icon">
             <ion-icon name="location-outline"></ion-icon>
@@ -1675,7 +1846,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
     <!-- بطاقة منطقة المعادي -->
-    <div class="service-card" onclick="toggleDropdown('dropdown5')">
+    <div class="المنطقه" onclick="toggleDropdown('dropdown5')">
         <h3 class="branch-item">فروع المعادي</h3>
         <div class="service-icon">
             <ion-icon name="location-outline"></ion-icon>
@@ -1694,7 +1865,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
     <!-- بطاقة منطقة القاهرة والتجمع -->
-    <div class="service-card" onclick="toggleDropdown('dropdown6')">
+    <div class="المنطقه" onclick="toggleDropdown('dropdown6')">
         <h3 class="branch-item">فروع القاهرة والتجمع</h3>
         <div class="service-icon">
             <ion-icon name="location-outline"></ion-icon>
@@ -1719,7 +1890,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
    <!-- بطاقة منطقة المحافظات -->
-    <div class="service-card" onclick="toggleDropdown('dropdown7')">
+    <div class="المنطقه" onclick="toggleDropdown('dropdown7')">
         <h3 class="branch-item">فروع المحافظات</h3>
         <div class="service-icon">
             <ion-icon name="location-outline"></ion-icon>
@@ -1771,12 +1942,12 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     <div class="album">
       <h3>ألبوم 1</h3>
       <div class="photo-grid">
-        <div class="photo-item"><img src="1.JPG" alt="تدريب 1"></div>
-        <div class="photo-item"><img src="2.JPG" alt="تدريب 2"></div>
-        <div class="photo-item"><img src="3.JPG" alt="تدريب 3"></div>
-        <div class="photo-item"><img src="4.JPG" alt="تدريب 4"></div>
-        <div class="photo-item hidden"><img src="5.JPG" alt="تدريب 5"></div>
-        <div class="photo-item hidden"><img src="6.JPG" alt="تدريب 6"></div>
+        <div class="photo-item"><img src="gallery\1.JPG" alt="تدريب 1"></div>
+        <div class="photo-item"><img src="gallery\2.JPG" alt="تدريب 2"></div>
+        <div class="photo-item"><img src="gallery\3.JPG" alt="تدريب 3"></div>
+        <div class="photo-item"><img src="gallery\4.JPG" alt="تدريب 4"></div>
+        <div class="photo-item hidden"><img src="gallery\5.JPG" alt="تدريب 5"></div>
+        <div class="photo-item hidden"><img src="gallery\6.JPG" alt="تدريب 6"></div>
         <!-- المزيد من الصور يمكن إضافتها هنا -->
       </div>
       <button class="show-more">عرض كل الصور</button>
@@ -1786,12 +1957,12 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     <div class="album">
       <h3>ألبوم 2</h3>
       <div class="photo-grid">
-        <div class="photo-item"><img src="1.JPG" alt="تدريب 1"></div>
-        <div class="photo-item"><img src="2.JPG" alt="تدريب 2"></div>
-        <div class="photo-item"><img src="3.JPG" alt="تدريب 3"></div>
-        <div class="photo-item"><img src="4.JPG" alt="تدريب 4"></div>
-        <div class="photo-item hidden"><img src="5.JPG" alt="تدريب 5"></div>
-        <div class="photo-item hidden"><img src="6.JPG" alt="تدريب 6"></div>
+        <div class="photo-item"><img src="gallery\1.JPG" alt="تدريب 1"></div>
+        <div class="photo-item"><img src="gallery\2.JPG" alt="تدريب 2"></div>
+        <div class="photo-item"><img src="gallery\3.JPG" alt="تدريب 3"></div>
+        <div class="photo-item"><img src="gallery\4.JPG" alt="تدريب 4"></div>
+        <div class="photo-item hidden"><img src="gallery\5.JPG" alt="تدريب 5"></div>
+        <div class="photo-item hidden"><img src="gallery\6.JPG" alt="تدريب 6"></div>
         <!-- المزيد من الصور يمكن إضافتها هنا -->
       </div>
       <button class="show-more">عرض كل الصور</button>
@@ -1800,63 +1971,187 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     <!-- ألبوم 3 -->
     <div class="album">
       <h3>ألبوم 3</h3>
-      <div class="photo-grid">
-        <div class="photo-item"><img src="1.JPG" alt="تدريب 1"></div>
-        <div class="photo-item"><img src="2.JPG" alt="تدريب 2"></div>
-        <div class="photo-item"><img src="3.JPG" alt="تدريب 3"></div>
-        <div class="photo-item"><img src="4.JPG" alt="تدريب 4"></div>
-        <div class="photo-item hidden"><img src="5.JPG" alt="تدريب 5"></div>
-        <div class="photo-item hidden"><img src="6.JPG" alt="تدريب 6"></div>
+          <div class="photo-grid">
+        <div class="photo-item"><img src="gallery\1.JPG" alt="تدريب 1"></div>
+        <div class="photo-item"><img src="gallery\2.JPG" alt="تدريب 2"></div>
+        <div class="photo-item"><img src="gallery\3.JPG" alt="تدريب 3"></div>
+        <div class="photo-item"><img src="gallery\4.JPG" alt="تدريب 4"></div>
+        <div class="photo-item hidden"><img src="gallery\5.JPG" alt="تدريب 5"></div>
+        <div class="photo-item hidden"><img src="gallery\6.JPG" alt="تدريب 6"></div>
         <!-- المزيد من الصور يمكن إضافتها هنا -->
       </div>
       <button class="show-more">عرض كل الصور</button>
     </div>
 
+
     <!-- ألبوم 4 -->
     <div class="album">
       <h3>ألبوم 4</h3>
-      <div class="photo-grid">
-        <div class="photo-item"><img src="..\IMAGES\1.JPG" alt="تدريب 1"></div>
-        <div class="photo-item"><img src="..\IMAGES\2.JPG" alt="تدريب 2"></div>
-        <div class="photo-item"><img src="..\IMAGES\3.JPG" alt="تدريب 3"></div>
-        <div class="photo-item"><img src="..\IMAGES\4.JPG" alt="تدريب 4"></div>
-        <div class="photo-item hidden"><..\IMAGES\img src="5.JPG" alt="تدريب 5"></div>
-        <div class="photo-item hidden"><img src="6.JPG" alt="تدريب 6"></div>
+          <div class="photo-grid">
+        <div class="photo-item"><img src="gallery\1.JPG" alt="تدريب 1"></div>
+        <div class="photo-item"><img src="gallery\2.JPG" alt="تدريب 2"></div>
+        <div class="photo-item"><img src="gallery\3.JPG" alt="تدريب 3"></div>
+        <div class="photo-item"><img src="gallery\4.JPG" alt="تدريب 4"></div>
+        <div class="photo-item hidden"><img src="gallery\5.JPG" alt="تدريب 5"></div>
+        <div class="photo-item hidden"><img src="gallery\6.JPG" alt="تدريب 6"></div>
         <!-- المزيد من الصور يمكن إضافتها هنا -->
       </div>
       <button class="show-more">عرض كل الصور</button>
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- قسم المنتجات -->
+<section id="product" class="products">
+  <div class="container">
+    <!-- عنوان القسم -->
+    <div class="section-title">
+      <h2>المنتجات</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="products-carousel">
+      <div class="product-card">
+        <img src="product/1.jpg" alt="Product 1">
+        <h3>Product 1 Name</h3>
+        <p>Short description of Product 1.</p>
+        <a href="#" class="cta-button">Learn More</a>
+      </div>
+      <div class="product-card">
+        <img src="product/2.jpg" alt="Product 2">
+        <h3>Product 2 Name</h3>
+        <p>Short description of Product 2.</p>
+        <a href="#" class="cta-button">Learn More</a>
+      </div>
+      <div class="product-card">
+        <img src="product/3.jpg" alt="Product 3">
+        <h3>Product 3 Name</h3>
+        <p>Short description of Product 3.</p>
+        <a href="#" class="cta-button">Learn More</a>
+      </div>
+      <div class="product-card">
+        <img src="product/4.jpg" alt="Product 4">
+        <h3>Product 4 Name</h3>
+        <p>Short description of Product 4.</p>
+        <a href="#" class="cta-button">Learn More</a>
+      </div>
+      <div class="product-card">
+        <img src="product/5.jpg" alt="Product 5">
+        <h3>Product 5 Name</h3>
+        <p>Short description of Product 5.</p>
+        <a href="#" class="cta-button">Learn More</a>
+      </div>
+      <div class="product-card">
+        <img src="product/6.jpg" alt="Product 6">
+        <h3>Product 6 Name</h3>
+        <p>Short description of Product 6.</p>
+        <a href="#" class="cta-button">Learn More</a>
+      </div>
+      <div class="product-card">
+        <img src="product/7.jpg" alt="Product 7">
+        <h3>Product 7 Name</h3>
+        <p>Short description of Product 7.</p>
+        <a href="#" class="cta-button">Learn More</a>
+      </div>
     </div>
   </div>
 </section>
 
 
 
-  <!-- قسم الأسئلة المتكررة -->
-  <section id="الاسئلة الشائعة" class="faq">
+
+<!-- قسم المدونة -->
+<section id="مدونة" class="blog">
     <div class="container">
-      <div class="section-title">
-        <h2>  الأسئلة الشائعة   </h2>
-        <div class="underline"></div>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-question">What is the registration process?</h3>
-        <p class="faq-text">You can register online through our registration form.</p>
-      </div>
-
-
-      <div class="faq-item">
-        <h3 class="faq-question"></h3>
-        <p class="faq-text"></p>
-      </div>
-
-
+        <!-- عنوان القسم -->
+        <div class="section-title">
+            <h2>مدونة الأكاديمية</h2>
+            <div class="underline"></div>
+        </div>
+        <!-- قائمة المقالات -->
+        <div class="blog-posts">
+            <!-- مقال 1 -->
+            <div class="blog-post">
+                <img src="blog1.jpg" alt="مقال 1" class="blog-img">
+                <div class="blog-content">
+                    <h3>عنوان المقال الأول</h3>
+                    <p class="blog-description">ملخص للمقال الأول. يقدم نظرة عامة على المحتوى ويشجع القارئ على قراءة المزيد.</p>
+                    <a href="#" class="cta-button">اقرأ المزيد</a>
+                </div>
+            </div>
+            <!-- مقال 2 -->
+            <div class="blog-post">
+                <img src="blog2.jpg" alt="مقال 2" class="blog-img">
+                <div class="blog-content">
+                    <h3>عنوان المقال الثاني</h3>
+                    <p class="blog-description">ملخص للمقال الثاني. يقدم نظرة عامة على المحتوى ويشجع القارئ على قراءة المزيد.</p>
+                    <a href="#" class="cta-button">اقرأ المزيد</a>
+                </div>
+            </div>
+            <!-- مقال 3 -->
+            <div class="blog-post">
+                <img src="blog3.jpg" alt="مقال 3" class="blog-img">
+                <div class="blog-content">
+                    <h3>عنوان المقال الثالث</h3>
+                    <p class="blog-description">ملخص للمقال الثالث. يقدم نظرة عامة على المحتوى ويشجع القارئ على قراءة المزيد.</p>
+                    <a href="#" class="cta-button">اقرأ المزيد</a>
+                </div>
+            </div>
+            <!-- مقال 4 -->
+            <div class="blog-post">
+                <img src="blog4.jpg" alt="مقال 4" class="blog-img">
+                <div class="blog-content">
+                    <h3>عنوان المقال الرابع</h3>
+                    <p class="blog-description">ملخص للمقال الرابع. يقدم نظرة عامة على المحتوى ويشجع القارئ على قراءة المزيد.</p>
+                    <a href="#" class="cta-button">اقرأ المزيد</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-   </div>
-    </div>
-   </div>
-    </div>
- 
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1878,7 +2173,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     </div>
     <div class="coaches-slider">
       <div class="coach">
-        <img src="coach\1.jpg" alt="مدرب 1" class="coach-img">
+        <img src="coach\1.png" alt="مدرب 1" class="coach-img">
         <div class="coach-info">
           <h3> اسلام جادو</h3>
           <p class="coach-branch"> منطقة اكتوبر وزايد</p>
@@ -2161,7 +2456,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
     // Close dropdowns if clicked outside
     document.addEventListener('click', (event) => {
-        const isDropdownButton = event.target.closest('.service-card');
+        const isDropdownButton = event.target.closest('.المنطقه');
         if (!isDropdownButton) {
             document.querySelectorAll('.dropdown-content').forEach(dropdown => {
                 dropdown.classList.remove('show');
