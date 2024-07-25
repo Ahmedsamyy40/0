@@ -1020,6 +1020,100 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   }
 }
 
+/*-----------------------------------*\
+  # OUR COACHES
+\*-----------------------------------*/
+/* قسم المدربين */
+.coaches {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.coaches .section-title h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.coaches .underline {
+  width: 100px;
+  height: 3px;
+  background-color: #000;
+  margin: 0 auto 20px;
+}
+
+.coaches .section-title p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.coaches-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px;
+}
+
+.coach {
+  min-width: 250px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.coach-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.coach-info h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.coach-info .coach-branch,
+.coach-info .coach-role {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .coaches .section-title h2 {
+    font-size: 1.5em;
+  }
+
+  .coaches-slider {
+    padding: 10px;
+  }
+
+  .coach {
+    min-width: 200px;
+    padding: 15px;
+  }
+
+  .coach-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  .coach-info h3 {
+    font-size: 1.2em;
+  }
+
+  .coach-info .coach-branch,
+  .coach-info .coach-role {
+    font-size: 1em;
+  }
+}
+
+
 
 
 
@@ -1351,8 +1445,11 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     <ul class="navbar-list">
       <li><a href="#" class="navbar-link">الرئيسيه</a></li>
       <li><a href="#carousel" class="navbar-link"> عن الاكاديمية</a></li>
+      <li><a href="#آراء أولياء الأمور" class="navbar-link"> آراء أولياء الأمور</a></li>
       <li><a href="#فروعنا" class="navbar-link"> فروعنا</a></li>
       <li><a href="#gallery" class="navbar-link">صور من التدريبات</a></li>
+      <li><a href="#مدربين الاكاديمية" class="navbar-link">مدربين الاكاديمية  </a></li>
+      <li><a href="#رعاة الأكاديمية" class="navbar-link"> رعاة الأكاديمية</a></li>
       <li><a href="#footer" class="navbar-link">تواصل معنا</a></li>
     </ul>
   </nav>
@@ -1412,7 +1509,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
-  <section id="فروعنا" class="فروعنا">
+  <section id="آراء أولياء الأمور" class="آراء أولياء الأمور">
         <div class="container">
             <!-- عنوان القسم -->
             <div class="section-title">
@@ -1461,33 +1558,6 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
-
-
-
-    <!-- قسم الرعاة -->
-    <section id="رعاتنا" class="رعاتنا">
-        <div class="container">
-            <!-- عنوان القسم -->
-            <div class="section-title">
-                <h2>رعاة الأكاديمية</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="sponsors">
-                <div class="sponsor">
-                    <img src="sponsor1.png" alt="راعي 1" class="sponsor-img">
-                </div>
-                <div class="sponsor">
-                    <img src="sponsor2.jpg" alt="راعي 2" class="sponsor-img">
-                </div>
-                <div class="sponsor">
-                    <img src="sponsor3.jpg" alt="راعي 3" class="sponsor-img">
-                </div>
-                <div class="sponsor">
-                    <img src="sponsor4.jpg" alt="راعي 4" class="sponsor-img">
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 
@@ -1787,6 +1857,102 @@ overflow-y: auto; /* تمكين التمرير العمودي */
    </div>
     </div>
  
+
+
+
+
+
+
+
+
+
+
+<!-- قسم المدربين -->
+<section id="مدربين الاكاديمية" class="مدربين الاكاديمية">
+  <div class="container">
+    <!-- عنوان القسم -->
+    <div class="section-title">
+      <h2>مدربين الاكاديمية</h2>
+      <div class="underline"></div>
+      <p>تقديم معلومات عن فريق العمل</p>
+    </div>
+    <div class="coaches-slider">
+      <div class="coach">
+        <img src="PARENT1.jpg" alt="مدرب 1" class="coach-img">
+        <div class="coach-info">
+          <h3> اسلام جادو</h3>
+          <p class="coach-branch"> منطقة اكتوبر وزايد</p>
+          <p class="coach-role">وظيفة:  مدير منطقه</p>
+        </div>
+      </div>
+      <div class="coach">
+        <img src="coach2.jpg" alt="مدرب 2" class="coach-img">
+        <div class="coach-info">
+          <h3>المدرب الثاني</h3>
+          <p class="coach-branch">فرع: المدينة</p>
+          <p class="coach-role">وظيفة: مساعد مدرب</p>
+        </div>
+      </div>
+      <div class="coach">
+        <img src="coach3.jpg" alt="مدرب 3" class="coach-img">
+        <div class="coach-info">
+          <h3>المدرب الثالث</h3>
+          <p class="coach-branch">فرع: المدينة</p>
+          <p class="coach-role">وظيفة: مدرب لياقة</p>
+        </div>
+      </div>
+      <div class="coach">
+        <img src="coach4.jpg" alt="مدرب 4" class="coach-img">
+        <div class="coach-info">
+          <h3>المدرب الرابع</h3>
+          <p class="coach-branch">فرع: المدينة</p>
+          <p class="coach-role">وظيفة: مدرب مهارات</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- قسم الرعاة -->
+    <section id="رعاة الأكاديمية" class="رعاة الأكاديمية">
+        <div class="container">
+            <!-- عنوان القسم -->
+            <div class="section-title">
+                <h2>رعاة الأكاديمية</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="sponsors">
+                <div class="sponsor">
+                    <img src="sponsor1.png" alt="راعي 1" class="sponsor-img">
+                </div>
+                <div class="sponsor">
+                    <img src="sponsor2.jpg" alt="راعي 2" class="sponsor-img">
+                </div>
+                <div class="sponsor">
+                    <img src="sponsor3.jpg" alt="راعي 3" class="sponsor-img">
+                </div>
+                <div class="sponsor">
+                    <img src="sponsor4.jpg" alt="راعي 4" class="sponsor-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ 
+
+
 
 
 
