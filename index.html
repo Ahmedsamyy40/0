@@ -444,6 +444,212 @@ body {
         }
 
 
+/*-----------------------------------*\
+  #اراء العملاء 
+\*-----------------------------------*/
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.underline {
+    width: 100px;
+    height: 4px;
+    background-color: #000;
+    margin: 10px auto;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimonial-info {
+    margin-bottom: 10px;
+}
+
+.testimonial-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.testimonial-info p {
+    margin: 0;
+    font-size: 1em;
+    color: #777;
+}
+
+.testimonial-text {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        width: calc(100% - 40px);
+    }
+}
+
+----------------------------------------------------------------------
+body {
+    font-family: 'Somar', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.underline {
+    width: 100px;
+    height: 4px;
+    background-color: #000;
+    margin: 10px auto;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimonial-info {
+    margin-bottom: 10px;
+}
+
+.testimonial-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.testimonial-info p {
+    margin: 0;
+    font-size: 1em;
+    color: #777;
+}
+
+.testimonial-text {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        width: calc(100% - 40px);
+    }
+}
+
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sponsor {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sponsor-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .sponsor {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor {
+        width: calc(100% - 40px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1200,6 +1406,96 @@ overflow-y: auto; /* تمكين التمرير العمودي */
         <ion-icon name="chevron-forward-outline"></ion-icon>
     </button>
 </section>
+
+
+
+
+
+
+  <section id="فروعنا" class="فروعنا">
+        <div class="container">
+            <!-- عنوان القسم -->
+            <div class="section-title">
+                <h2>آراء أولياء الأمور</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="parent1.jpg" alt="ولي الأمر 1" class="testimonial-img">
+                    <div class="testimonial-info">
+                        <h3>اسم ولي الأمر</h3>
+                        <p>فرع الأكاديمية</p>
+                    </div>
+                    <p class="testimonial-text">هذا هو الرأي الأول من ولي الأمر. نحن سعداء جداً بالمستوى التعليمي والنشاطات الرياضية التي تقدمها الأكاديمية.</p>
+                </div>
+                <div class="testimonial">
+                    <img src="parent2.png" alt="ولي الأمر 2" class="testimonial-img">
+                    <div class="testimonial-info">
+                        <h3>اسم ولي الأمر</h3>
+                        <p>فرع الأكاديمية</p>
+                    </div>
+                    <p class="testimonial-text">هذا هو الرأي الثاني من ولي الأمر. الأكاديمية توفر بيئة ممتازة لتطوير مهارات الأطفال.</p>
+                </div>
+                <div class="testimonial">
+                    <img src="parent3.jpg" alt="ولي الأمر 3" class="testimonial-img">
+                    <div class="testimonial-info">
+                        <h3>اسم ولي الأمر</h3>
+                        <p>فرع الأكاديمية</p>
+                    </div>
+                    <p class="testimonial-text">هذا هو الرأي الثالث من ولي الأمر. المدربون محترفون ويهتمون بشكل كبير بتقدم الأطفال.</p>
+                </div>
+                <div class="testimonial">
+                    <img src="parent4.jpg" alt="ولي الأمر 4" class="testimonial-img">
+                    <div class="testimonial-info">
+                        <h3>اسم ولي الأمر</h3>
+                        <p>فرع الأكاديمية</p>
+                    </div>
+                    <p class="testimonial-text">هذا هو الرأي الرابع من ولي الأمر. نحن راضون جداً عن الأكاديمية وعن التحسن الكبير في مستوى أطفالنا.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- قسم الرعاة -->
+    <section id="رعاتنا" class="رعاتنا">
+        <div class="container">
+            <!-- عنوان القسم -->
+            <div class="section-title">
+                <h2>رعاة الأكاديمية</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="sponsors">
+                <div class="sponsor">
+                    <img src="sponsor1.png" alt="راعي 1" class="sponsor-img">
+                </div>
+                <div class="sponsor">
+                    <img src="sponsor2.jpg" alt="راعي 2" class="sponsor-img">
+                </div>
+                <div class="sponsor">
+                    <img src="sponsor3.jpg" alt="راعي 3" class="sponsor-img">
+                </div>
+                <div class="sponsor">
+                    <img src="sponsor4.jpg" alt="راعي 4" class="sponsor-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
 
 
 
