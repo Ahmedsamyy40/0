@@ -452,6 +452,12 @@ body {
   #اراء العملاء 
 \*-----------------------------------*/
 
+
+
+
+
+
+
 .section-title {
     margin-bottom: 20px;
 }
@@ -597,6 +603,8 @@ body {
 @media (max-width: 768px) {
     .testimonial {
         width: calc(100% - 40px);
+
+
     }
 }
 
@@ -815,9 +823,8 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
+   background: var(--gradient-2);
+      border-radius: var(--radius-12);
   cursor: pointer;
   text-align: center;
 }
@@ -844,11 +851,10 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 }
 
 
-                                                                                   ---------------------------------------------- 
-
-/*-----------------------------------*\
-  # poduct
+ /*-----------------------------------*\
+  # PRODUCT
 \*-----------------------------------*/
+
 /* قسم المنتجات */
 .products {
   padding: 50px 0;
@@ -857,7 +863,6 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 .section-title {
   text-align: center;
 }
-
 
 .products-carousel {
   display: flex;
@@ -895,18 +900,22 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   color: #555;
 }
 
+/* تعديل زر عرض المزيد */
 .cta-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0.5em 1em; /* استخدم قياسات مرنة */
   margin-top: 10px;
-  background: #007bff;
-  color: #fff;
+  background: var(--gradient-2);
+  color: var(--white);
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: var(--radius-12);
+  box-shadow: var(--shadow);
+  transition: var(--transition-1);
+  max-width: 100%; /* تأكد من عدم تجاوز الزر لحجم البوكس */
 }
 
 .cta-button:hover {
-  background: #0056b3;
+  box-shadow: 0 7px 25px hsla(22, 62%, 42%, 0.1);
 }
 
 /* الاستجابة */
@@ -918,6 +927,10 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   .product-card {
     width: 250px;
   }
+
+  .cta-button {
+    font-size: 0.9rem; /* تعديل حجم النص لتتناسب مع حجم البوكس */
+  }
 }
 
 @media (max-width: 480px) {
@@ -928,21 +941,20 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   .product-card {
     width: 200px;
   }
-}
 
-                                                                           ----------------------------------------------------------------
+  .cta-button {
+    font-size: 0.8rem; /* تعديل حجم النص لتتناسب مع حجم البوكس */
+  }
+}
 
 /*-----------------------------------*\
   # BLOG
 \*-----------------------------------*/
 
-
 /* قسم المدونة */
 .blog {
     padding: 2rem 0;
 }
-
-
 
 .underline {
     width: 60px;
@@ -986,17 +998,21 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     margin-bottom: 1rem;
 }
 
+/* تعديل زر عرض المزيد */
 .cta-button {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #007bff;
-    color: #fff;
+    padding: 0.5em 1em; /* استخدم قياسات مرنة */
+    background: var(--gradient-2);
+    color: var(--white);
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: var(--radius-12);
+    box-shadow: var(--shadow);
+    transition: var(--transition-1);
+    max-width: 100%; /* تأكد من عدم تجاوز الزر لحجم البوكس */
 }
 
 .cta-button:hover {
-    background: #0056b3;
+  box-shadow: 0 7px 25px hsla(22, 62%, 42%, 0.1);
 }
 
 /* Responsive Design */
@@ -1004,7 +1020,13 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     .blog-post {
         width: calc(100% - 1rem);
     }
+
+    .cta-button {
+        font-size: 0.9rem; /* تعديل حجم النص لتتناسب مع حجم البوكس */
+    }
 }
+
+
                                                                                     ----------------------------------------------------------------
   
 
@@ -1278,7 +1300,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
       font-weight: var(--fw-500);
     }
 
-                                  --------------------------------------------------------------------------------------------------------------------------------------------
+                                             -------------------------------------------------------------------------------------
 
 
 
@@ -1492,7 +1514,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   }
 }
 
-                                                                    --------------------------------------------------------------
+                                                              
 
 /*-----------------------------------*\
   #INSTA & FACEBOOK LIVE VIEW
@@ -1517,11 +1539,12 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   overflow: auto;
 }
 
-                                                         -                             -----------------------------------------------------------
+                                                                  
 
 /*-----------------------------------*\
   #GO TO TOP
 \*-----------------------------------*/
+
 
 .go-top {
   position: fixed;
@@ -1531,7 +1554,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   color: var(--white);
   font-size: 2rem;
   padding: 14px;
-  border-radius: var(--radius-4);
+  border-radius: 50%;
   box-shadow: -3px 3px 15px var(--winter-sky_50);
   z-index: 2;
   visibility: hidden;
@@ -1546,14 +1569,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 }
 
 
-
-
-
-
-
-
-                                                                     -------------------------------------------------------------
-
+                                                              
 /*-----------------------------------*\
   #chatbot & wa icons
 \*-----------------------------------*/
@@ -1583,11 +1599,6 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 .floating-icons img:hover {
   transform: scale(1.1);
 }
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
                                                                                                              /*-----------------------------------*\
@@ -1692,55 +1703,49 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
-  <section id="آراء أولياء الأمور" class="آراء أولياء الأمور">
-        <div class="container">
-            <!-- عنوان القسم -->
-            <div class="section-title">
-                <h2>آراء أولياء الأمور</h2>
-                <div class="underline"></div>
+<section id="آراء أولياء الأمور" class="آراء_أولياء_الأمور">
+    <div class="container">
+        <!-- عنوان القسم -->
+        <div class="section-title">
+            <h2>آراء أولياء الأمور</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="parent\1.jpg" alt="ولي الأمر 1" class="testimonial-img">
+                <div class="testimonial-info">
+                    <h3>اسم ولي الأمر</h3>
+                    <p>فرع الأكاديمية</p>
+                </div>
+                <p class="testimonial-text">هذا هو الرأي الأول من ولي الأمر. نحن سعداء جداً بالمستوى التعليمي والنشاطات الرياضية التي تقدمها الأكاديمية.</p>
             </div>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img src="parent\1.jpg" alt="ولي الأمر 1" class="testimonial-img">
-                    <div class="testimonial-info">
-                        <h3>اسم ولي الأمر</h3>
-                        <p>فرع الأكاديمية</p>
-                    </div>
-                    <p class="testimonial-text">هذا هو الرأي الأول من ولي الأمر. نحن سعداء جداً بالمستوى التعليمي والنشاطات الرياضية التي تقدمها الأكاديمية.</p>
+            <div class="testimonial">
+                <img src="parent\2.png" alt="ولي الأمر 2" class="testimonial-img">
+                <div class="testimonial-info">
+                    <h3>اسم ولي الأمر</h3>
+                    <p>فرع الأكاديمية</p>
                 </div>
-                <div class="testimonial">
-                    <img src="parent\2.png" alt="ولي الأمر 2" class="testimonial-img">
-                    <div class="testimonial-info">
-                        <h3>اسم ولي الأمر</h3>
-                        <p>فرع الأكاديمية</p>
-                    </div>
-                    <p class="testimonial-text">هذا هو الرأي الثاني من ولي الأمر. الأكاديمية توفر بيئة ممتازة لتطوير مهارات الأطفال.</p>
+                <p class="testimonial-text">هذا هو الرأي الثاني من ولي الأمر. الأكاديمية توفر بيئة ممتازة لتطوير مهارات الأطفال.</p>
+            </div>
+            <div class="testimonial">
+                <img src="parent\3.jpg" alt="ولي الأمر 3" class="testimonial-img">
+                <div class="testimonial-info">
+                    <h3>اسم ولي الأمر</h3>
+                    <p>فرع الأكاديمية</p>
                 </div>
-                <div class="testimonial">
-                    <img src="parent\3.jpg" alt="ولي الأمر 3" class="testimonial-img">
-                    <div class="testimonial-info">
-                        <h3>اسم ولي الأمر</h3>
-                        <p>فرع الأكاديمية</p>
-                    </div>
-                    <p class="testimonial-text">هذا هو الرأي الثالث من ولي الأمر. المدربون محترفون ويهتمون بشكل كبير بتقدم الأطفال.</p>
+                <p class="testimonial-text">هذا هو الرأي الثالث من ولي الأمر. المدربون محترفون ويهتمون بشكل كبير بتقدم الأطفال.</p>
+            </div>
+            <div class="testimonial">
+                <img src="parent\4.jpg" alt="ولي الأمر 4" class="testimonial-img">
+                <div class="testimonial-info">
+                    <h3>اسم ولي الأمر</h3>
+                    <p>فرع الأكاديمية</p>
                 </div>
-                <div class="testimonial">
-                    <img src="parent\4.jpg" alt="ولي الأمر 4" class="testimonial-img">
-                    <div class="testimonial-info">
-                        <h3>اسم ولي الأمر</h3>
-                        <p>فرع الأكاديمية</p>
-                    </div>
-                    <p class="testimonial-text">هذا هو الرأي الرابع من ولي الأمر. نحن راضون جداً عن الأكاديمية وعن التحسن الكبير في مستوى أطفالنا.</p>
-                </div>
+                <p class="testimonial-text">هذا هو الرأي الرابع من ولي الأمر. نحن راضون جداً عن الأكاديمية وعن التحسن الكبير في مستوى أطفالنا.</p>
             </div>
         </div>
-    </section>
-
-
-
-
-
-
+    </div>
+</section>
 
 
 
@@ -2053,43 +2058,43 @@ overflow-y: auto; /* تمكين التمرير العمودي */
         <img src="product/1.jpg" alt="Product 1">
         <h3>Product 1 Name</h3>
         <p>Short description of Product 1.</p>
-        <a href="#" class="cta-button">Learn More</a>
+        <a href="#" class="cta-button">طلب المنتج</a>
       </div>
       <div class="product-card">
         <img src="product/2.jpg" alt="Product 2">
         <h3>Product 2 Name</h3>
         <p>Short description of Product 2.</p>
-        <a href="#" class="cta-button">Learn More</a>
+        <a href="#" class="cta-button">طلب المنتج</a>
       </div>
       <div class="product-card">
         <img src="product/3.jpg" alt="Product 3">
         <h3>Product 3 Name</h3>
         <p>Short description of Product 3.</p>
-        <a href="#" class="cta-button">Learn More</a>
+        <a href="#" class="cta-button">طلب المنتج</a>
       </div>
       <div class="product-card">
         <img src="product/4.jpg" alt="Product 4">
         <h3>Product 4 Name</h3>
         <p>Short description of Product 4.</p>
-        <a href="#" class="cta-button">Learn More</a>
+        <a href="#" class="cta-button">طلب المنتج</a>
       </div>
       <div class="product-card">
         <img src="product/5.jpg" alt="Product 5">
         <h3>Product 5 Name</h3>
         <p>Short description of Product 5.</p>
-        <a href="#" class="cta-button">Learn More</a>
+        <a href="#" class="cta-button">طلب المنتج</a>
       </div>
       <div class="product-card">
         <img src="product/6.jpg" alt="Product 6">
         <h3>Product 6 Name</h3>
         <p>Short description of Product 6.</p>
-        <a href="#" class="cta-button">Learn More</a>
+        <a href="#" class="cta-button">طلب المنتج</a>
       </div>
       <div class="product-card">
         <img src="product/7.jpg" alt="Product 7">
         <h3>Product 7 Name</h3>
         <p>Short description of Product 7.</p>
-        <a href="#" class="cta-button">Learn More</a>
+        <a href="#" class="cta-button">طلب المنتج</a>
       </div>
     </div>
   </div>
@@ -2267,6 +2272,7 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
+
 <section id="footer" class="footer">
   <footer class="footer">
     <div class="footer-top section">
@@ -2354,34 +2360,22 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
-  <!-- 
-    - #GO TO TOP
-  -->
-
-  <a href="#" class="go-top  active" aria-label="Go To Top" data-go-top>
-    <ion-icon name="arrow-up-outline"></ion-icon>
-  </a>
 
 
+   <!-- زر الذهاب إلى الأعلى -->
+    <a href="#" class="go-top active" aria-label="Go To Top" data-go-top>
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
 
-
-<div class="floating-icons">
-  <a href="https://api.whatsapp.com/send?phone=+201115222020" target="_blank" class="whatsapp-icon">
-    <img src="images/wa.png" alt="WhatsApp">
-  </a>
-
-
-  <!-- أيقونة الشات بوت -->
-<div class="chatbot-icon" id="chatbot-icon">
-  <img src="images/chatbot.png" alt="Chatbot">
-</div>
-
-
-
-
-
-
-
+    <!-- أيقونات عائمة -->
+    <div class="floating-icons">
+        <a href="https://api.whatsapp.com/send?phone=+201115222020" target="_blank" class="whatsapp-icon">
+            <img src="images/wa.png" alt="WhatsApp">
+        </a>
+        <div class="chatbot-icon" id="chatbot-icon">
+            <img src="images/chatbot.png" alt="Chatbot">
+        </div>
+    </div>
 
 
 
@@ -2557,6 +2551,16 @@ document.getElementById('chatbot-icon').addEventListener('click', function() {
       });
     });
   </script>
+
+
+
+
+
+
+
+
+
+
 
 
 
