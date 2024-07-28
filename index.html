@@ -755,6 +755,14 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 }
 
 
+.custom-icon {
+    width: 24px;
+    height: 34px;
+    object-fit: cover;
+}
+
+
+
 
 
                                                        ---------------------------------------------------
@@ -1905,40 +1913,69 @@ overflow-y: auto; /* تمكين التمرير العمودي */
 
 
 
-
-   <!-- بطاقة منطقة المحافظات -->
-    <div class="المنطقه" onclick="toggleDropdown('dropdown7')">
-        <h3 class="branch-item">فروع المحافظات</h3>
-        <div class="service-icon">
-            <ion-icon name="location-outline"></ion-icon>
-        </div>
-        <!-- القائمة المنسدلة -->
-        <div id="dropdown7" class="dropdown-content">
-            <a href="https://wa.me/p/25253637597618413/201115222020">نادي ضباط الشرطة (المنيا الجديدة)</a>
-            <a href="https://wa.me/p/7429569987134685/201115222020">(مدرسة المنيا الثانوية العسكرية) المنيا</a>
-            <a href="https://wa.me/p/7318204261562148/201115222020">أسيوط</a>
-            <a href="https://wa.me/p/7651183034927677/201115222020">نادي دمنهور الرياضي</a>
-            <a href="https://wa.me/p/7387315131382638/201115222020">الإسكندرية O Club</a>
-            <a href="https://wa.me/p/7384225488357381/201115222020">نادي شركة المياه الإسكندرية</a>
-            <a href="https://wa.me/p/6964758550291713/201115222020">نادي القوات المسلحة بني سويف</a>
-            <a href="https://wa.me/p/7467748433319946/201115222020">أستاد المنصورة</a>
-            <a href="https://wa.me/p/7106481086123323/201115222020">نادي بورتو الرياضي بورسعيد</a>
-            <a href="https://wa.me/p/26135347666052627/201115222020">نادي ماتريكس طنطا</a>
-            <a href="https://wa.me/p/8217760751573951/201115222020">السادات الملكي</a>
-            <a href="https://wa.me/p/25271268255852519/201115222020">جرين بارك السادات</a>
-            <a href="https://wa.me/p/7612297452219481/201115222020">سوهاج</a>
-            <a href="https://wa.me/p/25594038430241933/201115222020">شبين الكوم (مدرسة الألسن)</a>
-            <a href="https://wa.me/p/7596781880441275/201115222020">مركز شباب قليوب</a>
-            <a href="https://wa.me/p/7477079562418597/201115222020">المدينة الرياضية بشرم الشيخ</a>
-            <a href="https://wa.me/p/25844939781787030/201115222020">مدرسة أكسفورد طنطا</a>
-            <a href="https://wa.me/p/8259260244108006/201115222020">أستاد الطور</a>
-            <a href="https://wa.me/p/7452706114857649/201115222020">نادي بورتو الشرقية</a>
-            <a href="https://wa.me/p/25828412580137315/201115222020">سنديون</a>
-            <a href="https://wa.me/p/7810454985729350/201115222020">نادي كفر الشيخ</a>
-        </div>
+<!-- فروع المحافظات -->
+<div class="المنطقه" onclick="toggleDropdown('dropdown7')">
+    <h3 class="branch-item">فروع المحافظات</h3>
+    <div class="service-icon">
+        <ion-icon name="location-outline"></ion-icon>
+    </div>
+    <!-- القائمة المنسدلة -->
+    <div id="dropdown7" class="dropdown-content">
+        <a href="https://wa.me/p/7467748433319946/201115222020">أستاد المنصورة</a>
+        <a href="https://wa.me/p/7106481086123323/201115222020">نادي بورتو الرياضي بورسعيد</a>
+        <a href="https://wa.me/p/26135347666052627/201115222020">نادي ماتريكس طنطا</a>
+        <a href="https://wa.me/p/7477079562418597/201115222020">المدينه الرياضيه بشرم الشيخ</a>
+        <a href="https://wa.me/p/25844939781787030/201115222020">مدرسه اكسفورد طنطا</a>
+        <a href="https://wa.me/p/8259260244108006/201115222020">استاد الطور</a>
+        <a href="https://wa.me/p/7452706114857649/201115222020">نادي بورتو الشرقيه</a>
+        <a href="https://wa.me/p/25828412580137315/201115222020">سنديون</a>
+        <a href="https://wa.me/p/7810454985729350/201115222020">نادي كفر الشيخ</a>
     </div>
 </div>
 
+<!-- فروع إسكندرية ودمنهور -->
+<div class="المنطقه" onclick="toggleDropdown('dropdown8')">
+    <h3 class="branch-item">فروع إسكندرية ودمنهور</h3>
+    <div class="service-icon">
+        <img src="images\location.png" alt="Location Icon" class="custom-icon">
+    </div>
+    <!-- القائمة المنسدلة -->
+    <div id="dropdown8" class="dropdown-content">
+        <a href="https://wa.me/p/7651183034927677/201115222020">نادي دمنهور الرياضي</a>
+        <a href="https://wa.me/p/7387315131382638/201115222020">الإسكندرية O Club</a>
+        <a href="https://wa.me/p/7384225488357381/201115222020">نادي شركة المياه الإسكندرية</a>
+    </div>
+</div>
+
+<!-- فروع المنوفية -->
+<div class="المنطقه" onclick="toggleDropdown('dropdown9')">
+    <h3 class="branch-item">فروع المنوفية</h3>
+    <div class="service-icon">
+        <ion-icon name="location-outline"></ion-icon>
+    </div>
+    <!-- القائمة المنسدلة -->
+    <div id="dropdown9" class="dropdown-content">
+        <a href="https://wa.me/p/8217760751573951/201115222020">السادات الملكي</a>
+        <a href="https://wa.me/p/25271268255852519/201115222020">جرين بارك السادات</a>
+        <a href="https://wa.me/p/25594038430241933/201115222020">شبين الكوم (مدرسة الألسن)</a>
+    </div>
+</div>
+
+<!-- فروع الصعيد -->
+<div class="المنطقه" onclick="toggleDropdown('dropdown10')">
+    <h3 class="branch-item">فروع الصعيد</h3>
+    <div class="service-icon">
+        <ion-icon name="location-outline"></ion-icon>
+    </div>
+    <!-- القائمة المنسدلة -->
+    <div id="dropdown10" class="dropdown-content">
+        <a href="https://wa.me/p/25253637597618413/201115222020">نادي ضباط الشرطة (المنيا الجديدة)</a>
+        <a href="https://wa.me/p/7429569987134685/201115222020">(مدرسة المنيا الثانوية العسكرية) المنيا</a>
+        <a href="https://wa.me/p/7318204261562148/201115222020">أسيوط</a>
+        <a href="https://wa.me/p/7612297452219481/201115222020">سوهاج</a>
+        <a href="https://wa.me/p/6964758550291713/201115222020">نادي القوات المسلحة بني سويف</a>
+    </div>
+</div>
 
 
 
