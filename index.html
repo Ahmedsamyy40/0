@@ -1139,71 +1139,21 @@ overflow-y: auto; /* تمكين التمرير العمودي */
   # SPONSOR
 \*-----------------------------------*/
 
-.sponsor-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* المسافة بين الصور */
-}
-
-.sponsor-container img {
-  width: 100px; /* أو أي عرض مناسب */
-  height: auto;
-}
-
 
 .sponsors {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-wrap: nowrap; /* لا تسمح بتغليف العناصر */
+    justify-content: center; /* توسيط الصور أفقياً */
+    gap: 20px; /* المسافة بين الصور */
     padding: 20px;
-}
-
-.sponsor {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: calc(25% - 40px);
-    box-sizing: border-box;
-    text-align: center;
+    overflow-x: auto; /* السماح بالتمرير الأفقي إذا كانت الصور كبيرة جداً */
 }
 
 .sponsor-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100px; /* يمكنك ضبط الارتفاع حسب الحاجة */
+    object-fit: contain; /* لضمان احتواء الصور دون تشويه */
+    flex-shrink: 0; /* تأكد من عدم تصغير الصور */
 }
-
-@media (max-width: 768px) {
-    .sponsor {
-        width: calc(50% - 40px);
-    }
-}
-
-@media (max-width: 480px) {
-    .sponsor {
-        width: calc(100% - 40px);
-    }
-}
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2261,10 +2211,6 @@ overflow-y: auto; /* تمكين التمرير العمودي */
     </div>
   </div>
 </section>
-
-
-
-
 
 
 
